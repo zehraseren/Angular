@@ -1,0 +1,103 @@
+<div class="container">
+  <h3>Fatura</h3>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>İsim</label>
+        <input
+          class="form-control"
+          type="text"
+          (input)="onNameChange($event)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label><b>İsim</b></label>
+      <div>
+        {{ name | titlecase }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Ödeme Tarihi</label>
+        <input
+          class="form-control"
+          type="date"
+          (input)="onDateChange($event)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label><b>Ödeme Tarihi</b></label>
+      <div>
+        {{ date | date : "MMMM d, y" }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Tutar</label>
+        <input
+          class="form-control"
+          type="text"
+          (input)="onMoneyChange($event)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label><b>Tutar</b></label>
+      <div>
+        {{ money | currency : "TRY" }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Boy</label>
+        <input
+          class="form-control"
+          type="text"
+          (input)="onHeightChange($event)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label><b>Boy</b></label>
+      <div>
+        {{ height | number : "1.1-4" }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Json Pipe -->
+  <!-- {{ lessons | json }} -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Mil</label>
+        <input
+          class="form-control"
+          type="text"
+          (input)="onMilesChange($event)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label><b>Kilometre</b></label>
+      <div>
+        {{ miles | convert }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet />
