@@ -1,0 +1,20 @@
+.paginationUl {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.mainImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainImg h4 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.mainImg img {
+  max-height: 500px;
+}
