@@ -1,0 +1,22 @@
+<app-divider>Memnuniyet Anketi</app-divider>
+<app-table></app-table>
+
+<br />
+<app-divider>Ekstra Bilgiler</app-divider>
+
+<app-tabs>
+  <a
+    routerLink="./"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="item"
+  >
+    Sertifikalar
+  </a>
+  <a routerLink="./companies" routerLinkActive="active" class="item">
+    Yabancı Dil Bilgisi
+  </a>
+  <a routerLink="./partners" routerLinkActive="active" class="item">
+    Mezun Olduğu Okul
+  </a>
+</app-tabs>
