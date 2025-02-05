@@ -1,0 +1,39 @@
+<div class="container">
+  <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+    <app-input label="Ad Soyad" [control]="nameControl"></app-input>
+    <app-input label="Kart Numarası" [control]="cardNumberControl"></app-input>
+    <div class="columns">
+      <div class="column">
+        <ng-container *ngIf="expirationControl">
+          <app-input
+            label="Son Kullanma Tarihi"
+            [control]="expirationControl"
+          ></app-input>
+        </ng-container>
+      </div>
+      <div class="column">
+        <app-input
+          label="Güvenlik Kodu"
+          [control]="securityCodeControl"
+        ></app-input>
+      </div>
+    </div>
+
+    <div class="buttons is-flex is-justify-content-flex-end">
+      <button
+        (click)="resetForm()"
+        type="button"
+        class="button is-warning has-text-white"
+      >
+        Temizle
+      </button>
+      <button
+        [disabled]="cardForm.invalid"
+        type="submit"
+        class="button is-success has-text-white"
+      >
+        Kaydet
+      </button>
+    </div>
+  </form>
+</div>
