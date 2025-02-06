@@ -1,0 +1,35 @@
+<div class="container">
+  <form #emailForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input
+          class="input"
+          type="text"
+          name="email"
+          [(ngModel)]="email"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          #emailControl="ngModel"
+          required
+          [ngClass]="{ 'is-danger': emailForm.invalid && emailForm.touched }"
+        />
+      </div>
+    </div>
+
+    <ng-container *ngIf="emailForm.invalid && emailForm.touched">
+      <div class="help is-danger" *ngIf="emailControl.errors?.['required']">
+        *Zorunlu Alan
+      </div>
+      <div class="help is-danger" *ngIf="emailControl.errors?.['pattern']">
+        Lütfen doğru formatta giriniz.
+      </div>
+    </ng-container>
+    <button
+      class="button is-success has-text-white"
+      [disabled]="emailForm.invalid"
+    >
+      Kaydet
+    </button>
+  </form>
+</div>
+<router-outlet />
