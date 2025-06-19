@@ -1,0 +1,7 @@
+<ul>
+  @for(t of ex.todos; track t){
+  <li>{{t}}</li>
+  }
+</ul>
+
+<!-- "track", performans için track ifadesi zorunludur.  Bu sayede Angular her todo değiştiğinde hangi öğenin DOM'da güncelleneceğini daha iyi takip eder. -->

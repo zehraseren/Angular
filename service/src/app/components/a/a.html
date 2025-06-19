@@ -1,0 +1,14 @@
+<h1>Service Örneği</h1>
+<p>
+  <b>Not: </b>Angular'da service, birden fazla component tarafından
+  kullanılabilecek ortak iş mantığını <b>(logic)</b> yazılan sınıflardır. Kısaca Component’lerin içinde karmaşık işleri yazmak yerine, bu işleri dışarıda bir serviste yazılır.
+</p>
+<hr />
+<br />
+<div>
+  <input [(ngModel)]="ex.work" style="margin-right: 15px" />
+  <button (click)="ex.save()">Save</button>
+</div>
+<div>
+  <app-b></app-b>
+</div>
