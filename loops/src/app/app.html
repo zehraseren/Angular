@@ -1,0 +1,37 @@
+<h1>Döngüler</h1>
+
+<h4>Döngüdeki Veri Tek Tip İse</h4>
+<ul>
+  @for(data of todos; track data){
+  <li>
+    Index: {{$index}} || İlk kayıt mı?: {{$first}} || Son kayıt mı?: {{$last}}
+    || Veri: {{data}}
+  </li>
+  }
+</ul>
+
+<hr />
+
+<h4>Döngüdeki Veri Object İse</h4>
+<ul>
+  @for(data of todosDif; track data){
+  <li>
+    Index: {{$index}} || İlk kayıt mı?: {{$first}} || Son kayıt mı?: {{$last}}
+    || Veri: {{data.workDif}}
+  </li>
+  }
+</ul>
+
+<hr />
+
+<h4>Şart Blogları</h4>
+@if(showFirstText){
+<p [style.color]=" showFirstText === true ? 'red':''">Birinci Yazı</p>
+} @if(showSecondText){
+<p [style.color]=" showSecondText === true ? 'green':''">İkinci Yazı</p>
+}
+<br />
+<button (click)="show(1)" style="margin-right: 10px">
+  Birinci Yazıyı Göster
+</button>
+<button (click)="show(2)">İkinci Yazıyı Göster</button>
