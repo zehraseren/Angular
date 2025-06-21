@@ -11,10 +11,12 @@ export const routes: Routes = [
   {
     path: '',
     component: Layouts,
+    // canActivateChild ile tüm alt rotalarda auth kontrolü yapılabilir
     //canActivateChild: [() => inject(Auth).isAuthenticated(), authGuard],
     children: [
       {
         path: '',
+        // Bu sayfaya gitmeden önce çıkış onayı istenir
         canActivate: [checkGuard],
         component: Home,
       },
