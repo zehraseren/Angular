@@ -1,0 +1,53 @@
+<h1>Pipe Örneği</h1>
+<p>
+  <b>Not: </b>Angular’da verileri şablonda (template'te) dönüştürmek,
+  formatlamak veya filtrelemek için kullanılan bir yapıdır.
+</p>
+<li><b>Kısaca veriyi alır → işler → formatlayıp gösterir.</b></li>
+<br />
+<hr />
+<br />
+
+<div>
+  <input [(ngModel)]="work" style="margin-right: 15px" />
+  <button (click)="save()">Save</button>
+</div>
+<p>{{name | name}}</p>
+<div>
+  <input type="search" [(ngModel)]="search" placeholder="Search something" />
+  <br />
+  <ul>
+    @for(t of todos | todo:search; track t){
+    <li>{{t}}</li>
+    }
+  </ul>
+</div>
+
+<br />
+<hr />
+
+<h3>Angular'ın Kendi Verdiği Pipe'lar</h3>
+<p>{{nameNg | uppercase}}</p>
+<p>{{nameNg | lowercase}}</p>
+<p>{{nameNg | titlecase}}</p>
+
+<h5>
+  Pipe’lar zincirleme olarak da kullanılanılabilir; soldan sağa çalışır (Ne
+  kadar işlem olursa olsun son pipe sonucu görünür.):
+</h5>
+<li>titlecase → "Zehra Şeren"</li>
+<li>uppercase → "ZEHRA ŞEREN"</li>
+<li>lowercase → "zehra şeren"</li>
+<p>{{nameNg | titlecase| uppercase|lowercase}}</p>
+
+<p>{{dateNg | date:'dd.MM.yyy HH:mm:ss'}}</p>
+<li>
+  <b>MMM</b> yazınca ayın kısaltması, <b>MMMM</b> yazınca ayın tamamı yazılır.
+</li>
+<li>
+  <b>yy</b> yazınca yılın son 2 rakamı, <b>yyy</b> yazınca yılın tamamı yazılır.
+</li>
+
+<p>{{num | currency:'TRY':'symbol-narrow':'1.2-2'}}</p>
+
+<router-outlet />
