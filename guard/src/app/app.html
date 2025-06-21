@@ -1,0 +1,22 @@
+<h1>Guard</h1>
+
+<router-outlet />
+
+<!-- 
+
+Not: Guard, Angular'da bir route'a erişilmesine izin verip vermeyeceğini kontrol eden özel bir yapıdır. Yani: 
+
+• Kullanıcı bu sayfaya girebilir mi?
+• Token var mı?
+• Admin mi?
+• Formdan çıkarken uyarı verilsin mi?
+
+Tüm bunlara guard karar verir.
+
+4 farklı türü vardır:
+• CanActivate:Route’a girilmeden önce kontrol eder (en yaygın)
+• CanActivateChild: Alt route’lara giriş için kullanılır
+• CanDeactivate: Route’tan çıkmadan önce kontrol eder (örneğin: formdan çıkış)
+• CanMatch: Route eşleşmesini özel kurallara göre kontrol eder (CanActivate ve CanActivateChild'ın eski versiyonudur ancak eski sürümlerde hala kullandığı için kaldırılmamıştır) 
+
+-->
