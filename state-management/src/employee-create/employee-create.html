@@ -1,0 +1,20 @@
+<div>
+  <div>
+    <label>First Name</label>
+    <br />
+    <input type="text" [(ngModel)]="employee.firstName" />
+  </div>
+  <div>
+    <label>Last Name</label>
+    <br />
+    <input type="text" [(ngModel)]="employee.lastName" />
+  </div>
+  <div>
+    <label>Date of Birth</label>
+    <br />
+    <input type="text" [(ngModel)]="employee.dateOfBirth" />
+  </div>
+  <div>
+    <button (click)="saveEmployee()">Save</button>
+  </div>
+</div>

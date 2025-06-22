@@ -1,0 +1,43 @@
+<h1>State Management</h1>
+<h4>Input ile State Management</h4>
+<app-products />
+<!--
+
+Not: Uygulamanın veri durumunu (state) merkezi şekilde takip etme, yönetme ve paylaşma işidir.
+
+Veri nerede tutuluyor?
+• Kullanıcının oturum bilgisi?
+• Sepette kaç ürün var?
+• Filtreleme sonucu hangi ürünler listeleniyor?
+
+Bunların hepsi bir “state”tir. State management işte bu bilgileri komponentler arasında doğru ve verimli biçimde taşır, günceller.
+
+Angular’da State Yönetimi
+
+1. @Input() & @Output() ile (En Temel)
+• Parent → Child veri geçişi için @Input,
+• Child → Parent veri iletimi için @Output kullanılır.
+
+State burada parent component’tedir.
+
+2. Service ile (Orta Seviye)
+Ortak bir servis üzerinden tüm component’ler aynı veriyi paylaşır.
+
+Kısaca 
+
+Sen bir kaptanı olsun, gemide 5 mürettebat var.
+
+• @Input/@Output: Herkes kaptana sesleniyor → kaptan cevap veriyor.
+• Service: Ortak telsiz hattı var → herkes buradan konuşuyor. 
+
+-->
+
+<br />
+<br />
+<hr />
+
+<h3>Input ve Output İle İlgili Örnek</h3>
+
+<app-employee-create (myEvent)="save($event)" />
+<hr />
+<app-employees [employees]="employees" />

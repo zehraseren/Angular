@@ -1,0 +1,28 @@
+<h4>Products Components</h4>
+<hr />
+
+<!-- 
+
+productsInput: Parent component'te tanımlı products adlı dizi, child component’e gönderiliyor. 
+
+titleInput: Doğrudan string olarak "Product List Page" yazılmış ve gönderilmiş.
+
+-->
+
+<h3>Input</h3>
+<app-list [productsInput]="productsInput" titleInput="Product List Page" />
+
+<br />
+<hr />
+
+<!--
+
+nameOutput: string verisi child'a aktarılıyor 
+
+myEvent: Child'dan sinyal geldiğinde saveOutput() çalışır
+
+-->
+
+<h3>Output</h3>
+<p>{{nameOutput}}</p>
+<app-list2 [nameOutput]="nameOutput" (myEvent)="saveOutput($event)" />

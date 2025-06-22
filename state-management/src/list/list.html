@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Ürün Adı</th>
+      <th>Ürün Fiyatı</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(val of productsInput; track val){
+    <tr>
+      <td>{{$index}}</td>
+      <td>{{val.name}}</td>
+      <td>{{val.price}}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+
