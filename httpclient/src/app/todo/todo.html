@@ -1,0 +1,11 @@
+<h4>HttpClient ile Async API İsteği</h4>
+<ul>
+  @for(val of todos; track val){
+  <li>
+    {{val.title}}
+    <!-- Her öğe için detay sayfasına link, parametre olarak val.id gönderilir -->
+    <button [routerLink]="['/asyncapi', val.id]">Detail</button>
+  </li>
+  }
+</ul>
+<router-outlet />
