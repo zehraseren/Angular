@@ -23,4 +23,8 @@ export class App {
   goAsyncApi() {
     this.router.navigateByUrl('/asyncapi');
   }
+
+   goGenericHttpService() {
+    this.router.navigateByUrl('/generichttpservice');
+  }
 }
