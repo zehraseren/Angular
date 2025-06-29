@@ -1,0 +1,45 @@
+<h2>NgForm ile Form Yapısı</h2>
+<!-- Form elemanı, #saveForm referansı ile form nesnesi template'de yakalanır -->
+<form #saveForm="ngForm" (submit)="save(saveForm)">
+  <div>
+    Title
+    <!-- ngModel ile veri bağlama, name ile formun alan ismi belirlenir -->
+    <!-- required ve minlength ile validation kuralları tanımlanır -->
+    <input
+      [(ngModel)]="todo.title"
+      name="title"
+      required
+      minlength="3"
+      autocomplete="off"
+    />
+  </div>
+  <div>
+    Completed
+    <!-- Checkbox için ngModel ile binding, name alanı gereklidir -->
+    <input [(ngModel)]="todo.completed" type="checkbox" name="completed" />
+  </div>
+  <div>
+    <button type="submit">Save</button>
+  </div>
+</form>
+
+<br />
+<hr />
+
+<h2>Reactive Form Yapısı</h2>
+<!-- Reactive formun template ile bağlanması -->
+<form [formGroup]="groupReactive" (submit)="saveReactive()" autocomplete="off">
+  <div>
+    Title
+    <!-- FormGroup içinde tanımlı FormControl'u buraya bağlar -->
+    <input formControlName="titleR" name="titleR" />
+  </div>
+  <div>
+    Completed
+    <!-- Checkbox için formControlName ile bağlanır -->
+    <input formControlName="completedR" type="checkbox" name="completedR" />
+  </div>
+  <div>
+    <button type="submit">Save</button>
+  </div>
+</form>
