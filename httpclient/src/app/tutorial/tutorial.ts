@@ -48,13 +48,6 @@ export class Tutorial {
       });
   }
 
-  // HttpClient İsteğini Daha Kısa Yazma
-  // Bu yolun tek sıkıntılı hatakı kısımın yakalanamaması, hatayı yakalamak için ayrı bir catch bloğu açılması gerekmektedir
-  // get(){
-  //   this.#http.get<any[]>("").subscribe((res) =>{
-  //   });
-  // }
-
   post() {
     this.#http
       .post<{ message: string }>(
