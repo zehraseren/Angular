@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { TodoDetail } from './todo-detail/todo-detail';
 import { Routes, ActivatedRouteSnapshot } from '@angular/router';
 import { HttpInterceptors } from './http-interceptors/http-interceptors';
+import { Generichttpservice } from './generichttpservice/generichttpservice';
 
 export const routes: Routes = [
   {
@@ -38,4 +39,8 @@ export const routes: Routes = [
       },
     },
   },
+    {
+    path: 'generichttpservice',
+    component: Generichttpservice,
+  }
 ];
