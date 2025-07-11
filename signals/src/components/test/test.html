@@ -1,0 +1,9 @@
+<p>test works!</p>
+
+<p>Name: {{nameSignal()}}</p>
+
+<!-- linkedSignal reaktif yapıdır ve ngModel ile çift yönlü bağlanabilir -->
+<input [(ngModel)]="nameSignal" />
+
+<!-- Butona tıklanınca parent component'e event gönderilir -->
+<button (click)="save()">Save</button>

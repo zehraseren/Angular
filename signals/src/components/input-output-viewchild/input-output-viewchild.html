@@ -1,0 +1,8 @@
+<h3 #headEl>input-output-viewchild works!</h3>
+
+<!-- Signal olarak tanımlanan "name" değişkeniyle ngModel binding -->
+<input [(ngModel)]="name" />
+
+<!-- Test componentine parent'tan veri gönderilir ve child'dan event dinlenir -->
+<!-- name bir signal olduğu için name() ile değeri alınır -->
+<app-test [name]="name()" (myEvent)="save()"></app-test>

@@ -1,0 +1,14 @@
+<p>http-resource works!</p>
+<hr>
+@if(error()){
+  {{error()}}
+}
+@if(loading()){
+<p>loading...</p>
+} @else {
+<ul>
+  @for(data of todos(); track data.id){
+  <li>{{data.title}}</li>
+  }
+</ul>
+}

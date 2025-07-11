@@ -1,0 +1,10 @@
+<p>signals works!</p>
+<hr />
+<input [(ngModel)]="name" />
+<p>{{ name() }}</p>
+<hr>
+<!-- User modelden bağlamak istenilen değişken için -->
+<input [(ngModel)]="user().name" />
+<p>{{ user().name }}</p>
+<p>{{ user().age }}</p>
+<p>{{ user().email }}</p>

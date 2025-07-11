@@ -1,0 +1,27 @@
+<p>resource works!</p>
+<hr />
+
+<!-- Resource verisini yeniden yüklemek için kullanılır. Genellikle bir güncelleme sonrası tazeleme amaçlı. -->
+<button (click)="result.reload()">Reload</button>
+<button (click)="result.reload()">Reload</button>
+<br><br>
+
+<!-- Resource verisini sıfırlamak için kullanılır. Veriyi ve loading durumunu temizler. -->
+<button (click)="result.destroy()">Destroy</button>
+<br><br>
+
+<!-- num1 ve num2 signal'leri ngModel ile bağlanarak bu inputlarda değişiklik olduğunda resource tekrar tetiklenir. -->
+<input [(ngModel)]="num1">
+<input [(ngModel)]="num2">
+@if(error()){
+  {{error()}}
+}
+@if(loading()){
+<p>loading...</p>
+} @else {
+<ul>
+  @for(data of todos(); track data.id){
+  <li>{{data.title}}</li>
+  }
+</ul>
+}
