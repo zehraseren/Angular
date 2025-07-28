@@ -1,0 +1,12 @@
+<ng-container *transloco="let t">
+  <h1>{{t('TITLE')}}</h1>
+  <button (click)="changeLang('tr')" style="margin-right: 10px">
+    {{t('LANGUAGE.TR')}}
+  </button>
+  <button (click)="changeLang('en')">{{t('LANGUAGE.EN')}}</button>
+</ng-container>
+
+<!--
+  *transloco="let t" → Transloco şablon API'si ile çeviri işlevi alınır
+  t('TITLE') → Çeviri anahtarına göre ilgili dilde metin getirilir
+-->
