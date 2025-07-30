@@ -1,0 +1,92 @@
+[
+  {
+    "date": "2025-07-28",
+    "customer_name": "Ali Yılmaz",
+    "quantity": 2,
+    "price": 199.99
+  },
+  {
+    "date": "2025-07-28",
+    "customer_name": "Merve Çetin",
+    "quantity": 1,
+    "price": 349.0
+  },
+  {
+    "date": "2025-07-27",
+    "customer_name": "Ayşe Demir",
+    "quantity": 1,
+    "price": 89.9
+  },
+  {
+    "date": "2025-07-27",
+    "customer_name": "Mehmet Kara",
+    "quantity": 5,
+    "price": 45.5
+  },
+  {
+    "date": "2025-07-26",
+    "customer_name": "Zeynep Aksoy",
+    "quantity": 3,
+    "price": 129.0
+  },
+  {
+    "date": "2025-07-26",
+    "customer_name": "Fatih Özcan",
+    "quantity": 2,
+    "price": 220.0
+  },
+  {
+    "date": "2025-07-25",
+    "customer_name": "Canan Öztürk",
+    "quantity": 1,
+    "price": 299.99
+  },
+  {
+    "date": "2025-07-25",
+    "customer_name": "Kerem Şahin",
+    "quantity": 4,
+    "price": 67.75
+  },
+  {
+    "date": "2025-07-24",
+    "customer_name": "Selin Aydın",
+    "quantity": 1,
+    "price": 499.0
+  },
+  {
+    "date": "2025-07-24",
+    "customer_name": "Barış Kılıç",
+    "quantity": 2,
+    "price": 150.0
+  },
+  {
+    "date": "2025-07-23",
+    "customer_name": "Elif Gür",
+    "quantity": 1,
+    "price": 59.9
+  },
+  {
+    "date": "2025-07-23",
+    "customer_name": "Onur Aksu",
+    "quantity": 3,
+    "price": 79.99
+  },
+  {
+    "date": "2025-07-22",
+    "customer_name": "Gamze Korkmaz",
+    "quantity": 1,
+    "price": 999.0
+  },
+  {
+    "date": "2025-07-21",
+    "customer_name": "Tolga Çakır",
+    "quantity": 2,
+    "price": 120.5
+  },
+  {
+    "date": "2025-07-20",
+    "customer_name": "Buse Erdem",
+    "quantity": 6,
+    "price": 39.9
+  }
+]

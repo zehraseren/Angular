@@ -1,0 +1,90 @@
+<div>
+  <!-- dataBinding false olursa, dataStateChange kullanmanın anlamı kalmaz -->
+  <flexi-grid
+    [data]="data()"
+    [loading]="loading()"
+    language="tr"
+    themeClass="dark"
+    [showIndex]="true"
+    indexWidth="30px"
+    [filterable]="true"
+    [sortable]="true"
+    [resizable]="true"
+    [useCommandDropdown]="true"
+    [showCaption]="true"
+    (onRefresh)="result.reload()"
+    captionTitle="Satış Listesi"
+    [showExportExcelBtn]="true"
+    exportExcelFileName="satis_listesi"
+    [dataBinding]="true"
+    [total]="100"
+    (dataStateChange)="stateChange($event)"
+  >
+    <flexi-grid-column
+      field="date"
+      title="Tarih"
+      filterType="date"
+      format="dd MMM yyyy"
+    />
+    <flexi-grid-column field="customer_name" title="Müşteri" />
+    <flexi-grid-column
+      field="quantity"
+      title="Adet"
+      textAlign="right"
+      filterType="number"
+      format="n"
+      [fraction]="0"
+    />
+    <flexi-grid-column
+      field="price"
+      title="Birim Fiyatı"
+      textAlign="right"
+      filterType="number"
+      format="c"
+      symbol="₺"
+    />
+    <flexi-grid-column title="Toplam" textAlign="right">
+      <ng-template flexiGridCellTemplate let-item>
+        <span>{{(item.price * item.quantity) | trCurrency: '₺':false}}</span>
+      </ng-template>
+    </flexi-grid-column>
+    <!-- StickyColumn gibi düşünülebilir -->
+    <ng-template flexiGridColumnCommandTemplate let-item>
+      <flexi-button
+        btnIcon="edit"
+        btnColor="primary"
+        btnSize="small"
+        title="Güncelle"
+        flexiTooltip
+      />
+      <flexi-button
+        btnIcon="edit"
+        btnColor="primary"
+        btnSize="small"
+        title="Güncelle"
+        flexiTooltip
+      />
+      <flexi-button
+        btnIcon="edit"
+        btnColor="primary"
+        btnSize="small"
+        title="Güncelle"
+        flexiTooltip
+      />
+      <flexi-button
+        btnIcon="edit"
+        btnColor="primary"
+        btnSize="small"
+        title="Güncelle"
+        flexiTooltip
+      />
+      <flexi-button
+        btnIcon="edit"
+        btnColor="primary"
+        btnSize="small"
+        title="Güncelle"
+        flexiTooltip
+      />
+    </ng-template>
+  </flexi-grid>
+</div>
